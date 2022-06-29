@@ -1,15 +1,24 @@
 @font-face {
-  font-family: 'iconfont';
-  src: url('iconfont.woff2?t=1656405831677') format('woff2'),
-       url('iconfont.woff?t=1656405831677') format('woff'),
-       url('iconfont.ttf?t=1656405831677') format('truetype');
+  font-family: "iconfont"; /* Project id 3489085 */
+  src: url('iconfont.woff2?t=1656428467061') format('woff2'),
+       url('iconfont.woff?t=1656428467061') format('woff'),
+       url('iconfont.ttf?t=1656428467061') format('truetype');
 }
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-position:before {
+  content: "\e60e";
+}
+
+.icon-bell:before {
+  content: "\e7c4";
 }
 
 .icon-home1:before {
