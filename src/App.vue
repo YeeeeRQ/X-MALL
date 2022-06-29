@@ -19,7 +19,79 @@
         alt="banner img"
       />
     </div>
-    123
+    <div class="icons">
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p55ipms9j30280280sq.jpg"
+        />
+        <p class="icons__item__desc">超市便利</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg20slj3028028aa2.jpg"
+        />
+        <p class="icons__item__desc">菜市场</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwtu5j3028028aa3.jpg"
+        />
+        <p class="icons__item__desc">水果店</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg543kj30280283yh.jpg"
+        />
+        <p class="icons__item__desc">鲜花绿植</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg0mudj3028028mx6.jpg"
+        />
+        <p class="icons__item__desc">医药健康</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwau0j3028028jrd.jpg"
+        />
+        <p class="icons__item__desc">家居时尚</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfy6zsj30280280sr.jpg"
+        />
+        <p class="icons__item__desc">烘焙蛋糕</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvlsej302802874b.jpg"
+        />
+        <p class="icons__item__desc">签到</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvgnaj3028028jrd.jpg"
+        />
+        <p class="icons__item__desc">大牌免运</p>
+      </div>
+      <div class="icons__item">
+        <img
+          class="icons__item__img"
+          src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvebnj302802874a.jpg"
+        />
+        <p class="icons__item__desc">红包套餐</p>
+      </div>
+    </div>
+    <div class="gap"></div>
   </div>
   <div class="docker">
     <div class="docker__item docker__item--active">
@@ -55,10 +127,41 @@
   padding-left: 0.18rem;
   padding-right: 0.18rem;
 
+  .icons {
+    // border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.15rem;
+
+    &__item {
+      // display: flex;
+
+      // border: 1px solid red;
+      width: 20%;
+
+      &__img {
+        display: block;
+        width: 0.46rem;
+        height: 0.46rem;
+        margin: 0 auto;
+      }
+
+      &__desc {
+        padding-bottom: 0.1rem;
+        text-align: center;
+        color: $content-fontColor;
+      }
+    }
+  }
+
   .banner {
     height: 0;
     overflow: hidden;
     padding-bottom: 27.3%;
+
+    > img {
+      // border-radius: .05rem;
+    }
   }
 
   .search {
@@ -74,6 +177,7 @@
     padding-bottom: 0.03rem;
 
     display: flex;
+
     > .iconfont {
       margin-left: 0.12rem;
       margin-right: 0.12rem;
@@ -93,7 +197,7 @@
     padding: 0.16rem 0;
     font-size: 0.16rem;
     line-height: 0.16rem;
-    color: $content-fontcolor;
+    color: $content-fontColor;
 
     &__info {
       flex-grow: 1;
@@ -113,6 +217,12 @@
   }
 }
 
+.gap {
+  margin: 0 -0.18rem;
+  height: 0.1rem;
+  background-color: #f1f1f1;
+}
+
 .docker {
   border-top: 1px solid #f1f1f1;
   // background-color: lightgreen;
@@ -124,7 +234,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  color: $content-fontcolor;
+  color: $content-fontColor;
 
   display: flex;
 
