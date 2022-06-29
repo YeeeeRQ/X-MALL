@@ -30,6 +30,9 @@
 </template>
 
 <style lang="scss" scoped>
+@import "./style/variables.scss";
+@import "./style/mixins.scss";
+
 .wrapper {
   border: 1px solid red;
   position: absolute;
@@ -46,14 +49,12 @@
     padding: 0.16rem 0;
     font-size: 0.16rem;
     line-height: 0.16rem;
-    color: #333;
+    color: $content-fontcolor;
 
     &__info {
       flex-grow: 1;
 
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      @include ellipsis;
     }
 
     > .icon-position {
@@ -79,6 +80,8 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  color: $content-fontcolor;
+
   display: flex;
 
   &__item {
