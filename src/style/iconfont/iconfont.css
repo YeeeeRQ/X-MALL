@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3489085 */
-  src: url('iconfont.woff2?t=1656428467061') format('woff2'),
-       url('iconfont.woff?t=1656428467061') format('woff'),
-       url('iconfont.ttf?t=1656428467061') format('truetype');
+  src: url('iconfont.woff2?t=1656467912258') format('woff2'),
+       url('iconfont.woff?t=1656467912258') format('woff'),
+       url('iconfont.ttf?t=1656467912258') format('truetype');
 }
 
 .iconfont {
@@ -14,11 +14,15 @@
 }
 
 .icon-position:before {
-  content: "\e60e";
+  content: "\e64c";
 }
 
 .icon-bell:before {
-  content: "\e7c4";
+  content: "\e628";
+}
+
+.icon-fenxiang:before {
+  content: "\e600";
 }
 
 .icon-home1:before {
