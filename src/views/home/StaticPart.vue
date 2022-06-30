@@ -15,46 +15,11 @@
             alt="banner img" />
     </div>
     <div class="icons">
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p55ipms9j30280280sq.jpg" />
-            <p class="icons__item__desc">超市便利</p>
+        <div class="icons__item" v-for="item in iconList" :key="item.desc">
+            <img class="icons__item__img" :src="item.imgUrl" />
+            <p class="icons__item__desc">{{ item.desc }}</p>
         </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg20slj3028028aa2.jpg" />
-            <p class="icons__item__desc">菜市场</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwtu5j3028028aa3.jpg" />
-            <p class="icons__item__desc">水果店</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg543kj30280283yh.jpg" />
-            <p class="icons__item__desc">鲜花绿植</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg0mudj3028028mx6.jpg" />
-            <p class="icons__item__desc">医药健康</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwau0j3028028jrd.jpg" />
-            <p class="icons__item__desc">家居时尚</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfy6zsj30280280sr.jpg" />
-            <p class="icons__item__desc">烘焙蛋糕</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvlsej302802874b.jpg" />
-            <p class="icons__item__desc">签到</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvgnaj3028028jrd.jpg" />
-            <p class="icons__item__desc">大牌免运</p>
-        </div>
-        <div class="icons__item">
-            <img class="icons__item__img" src="http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvebnj302802874a.jpg" />
-            <p class="icons__item__desc">红包套餐</p>
-        </div>
+
     </div>
     <div class="gap"></div>
 
@@ -62,7 +27,52 @@
 
 <script>
 export default {
-    name: "StaticPart"
+    name: "StaticPart",
+    setup() {
+        const iconList = [
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p55ipms9j30280280sq.jpg',
+                desc: '超市便利'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg20slj3028028aa2.jpg',
+                desc: '菜市场'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwtu5j3028028aa3.jpg',
+                desc: '水果店'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg543kj30280283yh.jpg',
+                desc: '鲜花绿植'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lg0mudj3028028mx6.jpg',
+                desc: '医药健康'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfwau0j3028028jrd.jpg',
+                desc: '家居时尚'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfy6zsj30280280sr.jpg',
+                desc: '烘焙蛋糕'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvlsej302802874b.jpg',
+                desc: '签到'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvgnaj3028028jrd.jpg',
+                desc: '大牌免运'
+            },
+            {
+                imgUrl: 'http://tva1.sinaimg.cn/large/007HyW8lly1h3p5lfvebnj302802874a.jpg',
+                desc: '红包套餐'
+            },
+        ]
+        return { iconList }
+    }
 }
 </script>
 
@@ -70,6 +80,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
+
 .position {
     display: flex;
     padding: 0.16rem 0;
